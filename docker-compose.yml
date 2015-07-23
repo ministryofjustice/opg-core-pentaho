@@ -4,6 +4,7 @@ pentaho:
     - 8080:8080
   links:
     - postgres
+    - sqs
   environment:
     INSTALL_PLUGIN: marketplace,cdf,cda,cde,cgg,sparkl,saiku 
     RDS_PORT: 5432  
@@ -17,3 +18,9 @@ postgres:
   image: wmarinho/postgresql:9.3
   ports:
     - 5432:5432
+    
+sqs:
+  build: fake_sqs
+  ports:
+    - 4568:4568
+    
