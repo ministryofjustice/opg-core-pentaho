@@ -1,0 +1,19 @@
+pentaho:
+  image: wmarinho/pentaho
+  ports:
+    - 8080:8080
+  links:
+    - postgres
+  environment:
+    INSTALL_PLUGIN: marketplace,cdf,cda,cde,cgg,sparkl,saiku 
+    RDS_PORT: 5432  
+    RDS_DB_NAME: postgres  
+    RDS_USERNAME: pgadmin  
+    RDS_HOSTNAME: localhost
+    RDS_PASSWORD: pgadmin. 
+    DB_VENDOR: postgres
+
+postgres:
+  image: wmarinho/postgresql:9.3
+  ports:
+    - 5432:5432
