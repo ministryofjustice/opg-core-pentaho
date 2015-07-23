@@ -1,4 +1,3 @@
 opg-core-pentaho
 =====================
-
-run docker-compose up -d
+`docker-compose up -d`
