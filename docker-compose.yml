@@ -20,7 +20,7 @@ postgres:
     - 5432:5432
     
 sqs:
-  build: fake_sqs
+  image: registry.service.dsd.io/opguk/fake_sqs:latest
   ports:
     - 4568:4568
     
